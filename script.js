@@ -5,36 +5,7 @@ function setupRandomLogo() {
     
     // LISTA DE ÍCONES - ADICIONE SEUS LINKS AQUI
     const icons = [
-        // Ícones de casa/casações
-        'https://img.icons8.com/color/96/000000/home--v1.png',
-        'https://img.icons8.com/color/96/000000/cottage--v1.png',
-        'https://img.icons8.com/color/96/000000/real-estate.png',
-        'https://img.icons8.com/color/96/000000/house-with-a-garden.png',
-        'https://img.icons8.com/color/96/000000/home.png',
-        'https://img.icons8.com/color/96/000000/estate.png',
-        
-        // Ícones de filmes/cinema
-        'https://img.icons8.com/color/96/000000/clapperboard.png',
-        'https://img.icons8.com/color/96/000000/film-reel.png',
-        'https://img.icons8.com/color/96/000000/movie.png',
-        
-        // Ícones de livros/biblioteca
-        'https://img.icons8.com/color/96/000000/book.png',
-        'https://img.icons8.com/color/96/000000/book-stack.png',
-        'https://img.icons8.com/color/96/000000/books.png',
-        
-        // Ícones de curiosidades
-        'https://img.icons8.com/color/96/000000/idea.png',
-        'https://img.icons8.com/color/96/000000/light-on--v1.png',
-        'https://img.icons8.com/color/96/000000/lightbulb.png',
-        
-        // Ícones gerais
-        'https://img.icons8.com/color/96/000000/star--v1.png',
-        'https://img.icons8.com/color/96/000000/heart.png',
-        'https://img.icons8.com/color/96/000000/favorite.png',
-        'https://img.icons8.com/color/96/000000/diamond.png',
-        'https://img.icons8.com/color/96/000000/treasure-chest.png',
-        
+        // Ícones de casa/casações...
         // Adicione MAIS links aqui...
         // Exemplo: 'https://seusite.com/icone1.png',
         //          'https://seusite.com/icone2.png',
@@ -106,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mapeamento de temas
     const themeConfig = {
         'blue': {
-            name: 'OLED EDITION',
+            name: 'OHANA',
             color: '#0066cc',
             bannerVisible: true
         },
