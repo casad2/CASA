@@ -154,11 +154,32 @@ a {
     align-items: center;
 }
 
-#logo img {
-    height: 50px;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
+#logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 10px;
+    height: 100%;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-text {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+    color: var(--accent-primary);
 }
 
 /* Menu - Modernizado */
@@ -221,65 +242,6 @@ a {
 
 .mobile-menu-btn:hover {
     background: rgba(255, 255, 255, 0.1);
-}
-
-/* Banner Carrossel */
-#banner-wrapper {
-    padding: 30px 20px 40px;
-    background: var(--bg-secondary);
-    position: relative;
-    overflow: hidden;
-    transition: background-color 0.3s ease;
-}
-
-#banner {
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: var(--radius);
-    overflow: hidden;
-    position: relative;
-    border: 1px solid var(--border-light);
-    box-shadow: var(--shadow);
-}
-
-.banner-content {
-    padding: 50px 40px;
-    background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(26,26,26,0.8) 100%);
-    text-align: center;
-    position: relative;
-    z-index: 2;
-}
-
-.banner-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--text-primary);
-    text-transform: none;
-    letter-spacing: -0.5px;
-}
-
-.banner-content h2:after {
-    display: none;
-}
-
-.banner-content p {
-    color: var(--text-secondary);
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto 30px;
-    line-height: 1.6;
-}
-
-.banner-badge {
-    display: inline-block;
-    padding: 8px 20px;
-    background: var(--accent-primary);
-    color: white;
-    border-radius: 20px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    transition: background-color 0.3s ease;
 }
 
 /* Page Wrapper */
@@ -764,17 +726,18 @@ body[data-theme="purple"] .card-badge {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background: var(--bg-card);
     color: var(--text-secondary);
     text-decoration: none;
     transition: var(--transition);
+    font-size: 1.5rem;
 }
 
 .social-link:hover {
-    background: var(--accent-primary);
+    background: #9146ff; /* Cor da Twitch */
     color: white;
     transform: translateY(-3px);
 }
@@ -800,10 +763,6 @@ body[data-theme="purple"] .card-badge {
         font-size: 14px;
     }
     
-    .banner-content h2 {
-        font-size: 2rem;
-    }
-    
     .modal-content {
         width: 90%;
         padding: 30px;
@@ -825,8 +784,8 @@ body[data-theme="purple"] .card-badge {
         height: auto;
     }
     
-    #logo img {
-        height: 40px;
+    .logo-text {
+        font-size: 1.8rem;
     }
     
     /* Menu mobile */
@@ -866,14 +825,6 @@ body[data-theme="purple"] .card-badge {
         gap: 15px;
     }
     
-    .banner-content {
-        padding: 30px 20px;
-    }
-    
-    .banner-content h2 {
-        font-size: 1.7rem;
-    }
-    
     .modal-content {
         width: 95%;
         margin: 10% auto;
@@ -889,14 +840,6 @@ body[data-theme="purple"] .card-badge {
     .cards-container {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 15px;
-    }
-    
-    .banner-content h2 {
-        font-size: 1.5rem;
-    }
-    
-    .banner-content p {
-        font-size: 1rem;
     }
     
     h2 {
@@ -920,8 +863,8 @@ body[data-theme="purple"] .card-badge {
         margin-bottom: 20px;
     }
     
-    #logo img {
-        height: 35px;
+    .logo-text {
+        font-size: 1.5rem;
     }
 }
 
@@ -934,106 +877,15 @@ body[data-theme="purple"] .card-badge {
         padding: 15px;
     }
 }
-/* Estilo do banner visível/oculto */
-#banner-wrapper {
-    transition: opacity 0.5s ease, transform 0.5s ease, max-height 0.5s ease, padding 0.5s ease;
-    overflow: hidden;
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-#banner-wrapper.hidden {
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-20px);
-    padding: 0 !important;
-    margin: 0 !important;
-    border: none !important;
-}
-
-/* Ajuste do padding quando o banner está oculto */
-body:not([data-theme="blue"]) #page-wrapper {
-    padding-top: 20px;
-}
-
-/* Ajuste para mobile quando o banner está oculto */
-@media (max-width: 768px) {
-    body:not([data-theme="blue"]) #page-wrapper {
-        padding-top: 10px;
-    }
-}
-/* Estilos para a logo com ícone aleatório */
-#logo a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 10px;
-    height: 100%;
-}
-
-#logo-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-#logo-image {
-    height: 50px;
-    width: 50px;
-    object-fit: contain;
-    border-radius: 8px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 5px;
-}
-
-#logo-image:hover {
-    transform: scale(1.1) rotate(5deg);
-}
-
-.logo-text {
-    font-family: 'Oswald', sans-serif;
-    font-size: 2.2rem;
-    font-weight: 300;
-    color: white;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.logo-text:hover {
-    color: var(--accent-primary);
-}
-
-/* Efeito de fade para transição de ícones */
-.fade-in {
-    animation: fadeIn 0.5s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 /* Ajuste do tamanho da logo para mobile */
 @media (max-width: 768px) {
-    #logo-image {
-        height: 40px;
-        width: 40px;
-    }
-    
     .logo-text {
         font-size: 1.8rem;
     }
 }
 
 @media (max-width: 480px) {
-    #logo-image {
-        height: 35px;
-        width: 35px;
-    }
-    
     .logo-text {
         font-size: 1.5rem;
     }
