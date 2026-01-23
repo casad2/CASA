@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'blue': {
             name: 'OHANA',
             color: '#0066cc',
-            bannerVisible: true
+            bannerVisible: false
         },
         'red': {
             name: 'CINEMA MODE',
