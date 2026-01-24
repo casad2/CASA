@@ -12,19 +12,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mapeamento de temas
     const themeConfig = {
         'blue': {
-            name: 'OHANA',
+            name: 'DESTAQUES',
             color: '#0066cc'
         },
         'red': {
-            name: 'CINEMA MODE',
+            name: 'CINEMA',
             color: '#e53935'
         },
         'green': {
-            name: 'LIBRARY MODE',
+            name: 'LIBRARY',
             color: '#2e7d32'
         },
         'purple': {
-            name: 'CURIOSITY MODE',
+            name: 'CURIOSITY',
             color: '#7b1fa2'
         }
     };
