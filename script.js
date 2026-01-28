@@ -1,4 +1,4 @@
-// Sistema de Abas Funcionais
++// Sistema de Abas Funcionais
 document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.querySelectorAll('#menu a');
     const mobileTabs = document.querySelectorAll('.mobile-tab');
@@ -191,14 +191,7 @@ function initCarousel() {
         {
             title: "Viva a vida é uma festa",
             image: "https://image.tmdb.org/t/p/original/hWGEEuYpT0KnjEVRUYmNijjQ6G8.jpg"
-        },
-        
-        
-
-        
-        
-        
-        
+        },      
         
     ];
 
