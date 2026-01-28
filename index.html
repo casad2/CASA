@@ -4,33 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Catálogo pessoal de filmes, séries e livros recomendados. Avaliações e curiosidades sobre entretenimento.">
-    <title>Casa</title>
+    <title>Absolute</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css' />
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="blue">
+<body>
     <div id="header">
         <div class="header-container">
             <div id="logo">
                 <a href="#">
-                    <div id="logo-container">
-                        <span class="logo-text">CASA</span>
+                    <div id="logo-container"> 
+                        <span class="logo-text">Absolute</span>
                     </div>
                 </a>
             </div>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
-            </button>
+            <!-- Menu simplificado para mobile -->
+            <div class="mobile-tabs">
+                <a href="#cinema" class="mobile-tab active" data-tab="cinema">
+                    <i class="fas fa-film"></i> <span class="mobile-tab-text">Cinema</span>
+                </a>
+                <a href="#library" class="mobile-tab" data-tab="library">
+                    <i class="fas fa-book"></i> <span class="mobile-tab-text">Biblioteca</span>
+                </a>
+            </div>
             
+            <!-- Menu desktop -->
             <nav id="menu">
                 <ul>
-                    <li class="active"><a href="#" data-tab="highlights" data-color="blue"><i class="fas fa-fire"></i> Destaques</a></li>
-                    <li><a href="#" data-tab="cinema" data-color="red"><i class="fas fa-film"></i> Cinema</a></li>
-                    <li><a href="#" data-tab="library" data-color="green"><i class="fas fa-book"></i> Biblioteca</a></li>
-                    <li><a href="#" data-tab="curiosities" data-color="purple"><i class="fas fa-lightbulb"></i> Curiosidades</a></li>
+                    <li class="active"><a href="#" data-tab="cinema"><i class="fas fa-film"></i> Cinema</a></li>
+                    <li><a href="#" data-tab="library"><i class="fas fa-book"></i> Biblioteca</a></li>
                 </ul>
             </nav>
         </div>
@@ -38,142 +43,18 @@
     
     <div id="page-wrapper">
         <div id="page">
-            <div id="highlights" class="tab-content active">
+            <div id="cinema" class="tab-content active">
                 <div class="page-content">
                     <main id="content">
-                        <h2>Destaques</h2>
-                        
-                        <div class="highlight-section">
-                            <h3><i class="fas fa-film"></i> Cinema</h3>
-                            <div class="cards-container">
-                                <!-- Card 1: Os Incríveis -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/z8k5EhZZTLsCRF8NWjSe6snWNZg.jpg" alt="Os Incríveis - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Os Incríveis</h4>
-                                        <p class="card-description">Assiste essa obra de arte e depois me conta.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 2: Enrolados -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/wZzVkdnc0kw20lSJc13ZmgTPah3.jpg" alt="Enrolados - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Enrolados</h4>
-                                        <p class="card-description">Rapunzel moderna, cansada da vida na torre, decide curtir a vida com o Bezerra.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 3: SPYxFAMILY -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yY8JGpdwAiT9ZKaOzQJHIa6E4Ga.jpg" alt="SPYxFAMILY - Poster da série">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>SPYxFAMILY</h4>
-                                        <p class="card-description">Um espião, uma assassina e a criança mais adorável do mundo dos animes formam uma família de verdade.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 4: Mufasa: O Rei Leão -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/iMVuv6Gz5fj7vZ51IjRF3AiW87y.jpg" alt="Mufasa: O Rei Leão - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Mufasa: O Rei Leão</h4>
-                                        <p class="card-description">Os leões cantam enquanto atuam. Muita Aura.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 5: Como treinar seu Dragão -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://image.tmdb.org/t/p/w600_and_h900_bestv2/sLpQSFj8A5jyUZStwzWfKpoJoAx.jpg" alt="Como treinar seu Dragão - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Como treinar seu Dragão</h4>
-                                        <p class="card-description">O inicio de Soluço e Banguela com uma trilogia impecável.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 6: O Pior Vizinho do Mundo -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oXHNdN1hjg6RFQ5NP618KSAIrdE.jpg" alt="O Pior Vizinho do Mundo - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>O Pior Vizinho do Mundo</h4>
-                                        <p class="card-description">Revoltado com tudo, encontra Otto motivo pelo qual viver.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="highlight-section">
-                            <h3><i class="fas fa-book"></i> Livros</h3>
-                            <div class="cards-container">
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://m.media-amazon.com/images/I/81R+oTGHiYL._SY466_.jpg" alt="Capa do livro: As estrelas sempre brilham acima das nuvens escuras">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>As estrelas sempre brilham acima das nuvens escuras</h4>
-                                        <p class="card-description">Vicky vai parar no futuro e não sabe como voltar para seu tempo atual.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i>10</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </main>
-                    
-                    <aside id="sidebar">
-                        <div class="sidebar-section">
-                            <h3><i class="fas fa-info-circle"></i> Sobre o Catálogo</h3>
-                            <p class="info-text">Nosso espaço para registrar filmes, séries e livros que tem as maiores notas. Cada item foi selecionado com cuidado e avaliado com critério por profissionais, Pode confiar.</p>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-            
-            <div id="cinema" class="tab-content">
-                <div class="page-content">
-                    <main id="content">
-                        <h2>Cinema</h2>
+                        <!-- Carrossel será inserido aqui via JavaScript -->
                         
                         <div class="highlight-section">
                             <h3><i class="fas fa-ticket-alt"></i> Em Cartaz</h3>
                             <div class="cards-container">
-                                
-                                
                                 <div class="card">
                                     <div class="card-badge">Filme</div>
                                     <div class="card-cover">
-                                        <img src="https://image.tmdb.org/t/p/original/TQtQcckcXwkWxcij6JxJiyVXkG.jpg" alt="">
+                                        <img src="https://image.tmdb.org/t/p/original/TQtQcckcXwkWxcij6JxJiyVXkG.jpg" alt="Dragon Ball Z: Bardock, O Pai de Goku - Poster do filme">
                                     </div>
                                     <div class="card-content">
                                         <h4>Dragon Ball Z: Bardock, O Pai de Goku</h4>
@@ -188,7 +69,7 @@
                         </div>
                         
                         <div class="highlight-section">
-                            <h3><i class="fas fa-history"></i> Assistidos Recentemente</h3>
+                            <h3><i class="fas fa-film"></i> Todos os Filmes</h3>
                             <div class="cards-container">
                                 <!-- Card 1: Como treinar seu Dragão 3 -->
                                 <div class="card">
@@ -629,8 +510,10 @@
                     </main>
                     
                     <aside id="sidebar">
+                        <!-- Filmes Premiados será inserido aqui via JavaScript -->
+                        
                         <div class="sidebar-section">
-                            <h3><i class="fas fa-info-circle"></i> Sobre as Avaliações</h3>
+                            <h3><i class="fas fa-info-circle blue-icon"></i> Sobre as Avaliações</h3>
                             <p class="info-text">Avaliações feitas pelos críticos mais humildes (e melhores) do mundo do cinema.</p>
                         </div>
                     </aside>
@@ -647,10 +530,10 @@
                             <div class="cards-container">
                                 <div class="card">
                                     <div class="card-cover">
-                                        <img src="https://m.media-amazon.com/images/I/81R+oTGHiYL._SY466_.jpg" alt="Livro As estrelas sempre brilham acima das nuvens escuraso">
+                                        <img src="https://m.media-amazon.com/images/I/81R+oTGHiYL._SY466_.jpg" alt="Livro As estrelas sempre brilham acima das nuvens escuras">
                                     </div>
                                     <div class="card-content">
-                                        <h4>As estrelas sempre brilham acima das nuvens escuras.</h4>
+                                        <h4>As estrelas sempre brilham acima das nuvens escuras</h4>
                                         <p class="card-description">Vicky vai parar no futuro e não sabe como voltar para seu tempo atual.</p>
                                         <div class="card-meta">
                                             <div class="card-rating"><i class="fas fa-star"></i> 10</div>
@@ -666,10 +549,10 @@
                             <div class="cards-container">
                                 <div class="card">
                                     <div class="card-cover">
-                                        <img src="https://m.media-amazon.com/images/I/81w+TPxOtBL._SL1500_.jpg" alt="Livro em manutenção">
+                                        <img src="https://m.media-amazon.com/images/I/81w+TPxOtBL._SL1500_.jpg" alt="Livro A Escolha do Verão">
                                     </div>
                                     <div class="card-content">
-                                        <h4>A Escolha do Verão.</h4>
+                                        <h4>A Escolha do Verão</h4>
                                         <p class="card-description"></p>
                                         <div class="card-meta">
                                             <div class="card-rating"><i class="fas fa-star"></i> -</div>
@@ -683,76 +566,11 @@
                     
                     <aside id="sidebar">
                         <div class="sidebar-section">
-                            <h3><i class="fas fa-info-circle"></i> Sobre a Biblioteca</h3>
+                            <h3><i class="fas fa-info-circle blue-icon"></i> Sobre a Biblioteca</h3>
                             <p class="info-text">Lugar para saborear um café ou Toddynho e conferir os livros. (não esquece de beber água 🙂)</p>
                         </div>
                     </aside>
                 </div>
-            </div>
-            
-            <div id="curiosities" class="tab-content">
-                <div class="page-content">
-                    <main id="content">
-                        <h2>Curiosidades</h2>
-                        
-                        <div class="highlight-section">
-                            <h3><i class="fas fa-lightbulb"></i> Temas Variados</h3>
-                            <div class="cards-container">
-                                <div class="card" data-fulltext="Como Treinar o Seu Dragão 3 arrecadou mais de US$ 500 milhões mundialmente, tornando-se a animação mais lucrativa do ano de 2019. O filme marcou o fim da trilogia que começou em 2010, encerrando a história de Hiccup e Banguela de forma emocionante. A animação foi elogiada pela crítica por sua animação impressionante e narrativa emocionalmente satisfatória.">
-                                    <div class="card-badge">CINEMA</div>
-                                    <div class="card-cover">
-                                        <img src="https://image.tmdb.org/t/p/original/vU6rEo3LD53uVGgekVhytT7hS4Y.jpg" alt="Como Treinar o Seu Dragão - Curiosidade">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Recorde de Bilheteria</h4>
-                                        <p class="card-description">Como Treinar o Seu Dragão 3 arrecadou mais de US$ 500 milhões mundialmente, tornando-se a animação mais lucrativa do ano de 2019.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="card" data-fulltext="Harry Potter foi rejeitado por 12 editoras antes de ser aceita pela Bloomsbury. O CEO da editora, Nigel Newton, deu o manuscrito para sua filha de 8 anos ler durante as férias. Ela adorou e pediu o próximo capítulo imediatamente. Essa história se tornou lendária no mundo editorial e mostra como a opinião de uma criança mudou a história da literatura.">
-                                    <div class="card-badge">LITERATURA</div>
-                                    <div class="card-cover">
-                                        <img src="https://images.unsplash.com/photo-1600189261867-30e5ffe7b8da?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900&q=80" alt="Harry Potter - Curiosidade">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Rejeição Editorial</h4>
-                                        <p class="card-description">Harry Potter foi rejeitado por 12 editoras antes de ser aceita. O CEO deu o manuscrito para sua filha de 8 anos ler.</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="card" data-fulltext="Toy Story, lançado em 1995, foi o primeiro longa-metragem totalmente animado por computador. A produção levou 4 anos e utilizou 117 computadores para renderizar os quadros. Cada quadro levava em média 45 minutos a 30 horas para renderizar, dependendo da complexidade. O filme revolucionou a indústria de animação e abriu caminho para todas as animações digitais que vieram depois.">
-                                    <div class="card-badge">CINEMA</div>
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg" alt="Toy Story - Curiosidade">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Primeira Animação Digital</h4>
-                                        <p class="card-description">Toy Story foi o primeiro filme totalmente animado por computador em 1995.</p>
-                                    </div>
-                                </div>
-
-                                
-                            </div>
-                        </div>
-                    </main>
-                    
-                    <aside id="sidebar">
-                        <div class="sidebar-section">
-                            <h3><i class="fas fa-info-circle"></i> Sobre as Curiosidades</h3>
-                            <p class="info-text">Curiosidades aleatórias que são legais.</p>
-                        </div>
-                    </aside>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="textModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" id="closeTextModal">&times;</span>
-            <div class="modal-body">
-                <h2 class="modal-title" id="modalTextTitle"></h2>
-                <div class="modal-text" id="modalTextContent"></div>
             </div>
         </div>
     </div>
@@ -763,11 +581,12 @@
 
     <footer id="footer">
         <div class="footer-content">
-            <div class="footer-logo" style="color: white;">CASA</div>
+            <div class="footer-logo" style="color: white;">absolute</div>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-twitch"></i></a>
+                <!-- Substitua SEU_USER_TWITCH pelo seu usuário da Twitch -->
+                <a href="https://www.twitch.tv/SEU_USER_TWITCH" class="social-link" target="_blank" rel="noopener"><i class="fab fa-twitch"></i></a>
             </div>
-            <p>&copy; 2026 Casa. Todos os direitos reservados.</p>
+            <p>&copy; 2026 absolute. Todos os direitos reservados.</p>
         </div>
     </footer>
 
