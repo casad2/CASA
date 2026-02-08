@@ -1,4 +1,4 @@
-+// Sistema de Abas Funcionais
+// Sistema de Abas Funcionais
 document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.querySelectorAll('#menu a');
     const mobileTabs = document.querySelectorAll('.mobile-tab');
@@ -32,15 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
             // Scroll suave para o topo da página ao mudar de aba
             window.scrollTo({ top: 0, behavior: 'smooth' });
             
-            // Fecha todos os cards expandidos ao mudar de aba
-            document.querySelectorAll('.card.expanded').forEach(card => {
-                card.classList.remove('expanded');
-            });
+            // Fecha o modal se estiver aberto
+            closeModal();
             
-            // Inicializar carrossel se for para a aba Cinema
-            if (tabId === 'cinema') {
-                setTimeout(initCarousel, 100);
-            }
+            // Inicializar elementos se necessário
+            setTimeout(() => {
+                if (tabId === 'cinema') {
+                    initCarousel();
+                    initHorizontalCarousels();
+                    initPosterModal();
+                } else if (tabId === 'library') {
+                    initPosterModal();
+                }
+            }, 100);
         });
     });
     
@@ -80,21 +84,25 @@ document.addEventListener('DOMContentLoaded', function() {
             // Scroll suave para o topo da página ao mudar de aba
             window.scrollTo({ top: 0, behavior: 'smooth' });
             
-            // Fecha todos os cards expandidos ao mudar de aba
-            document.querySelectorAll('.card.expanded').forEach(card => {
-                card.classList.remove('expanded');
-            });
+            // Fecha o modal se estiver aberto
+            closeModal();
             
-            // Inicializar carrossel se for para a aba Cinema
-            if (targetTabId === 'cinema') {
-                setTimeout(initCarousel, 100);
-            }
+            // Inicializar elementos se necessário
+            setTimeout(() => {
+                if (targetTabId === 'cinema') {
+                    initCarousel();
+                    initHorizontalCarousels();
+                    initPosterModal();
+                } else if (targetTabId === 'library') {
+                    initPosterModal();
+                }
+            }, 100);
         });
     });
     
     // Botão voltar ao topo
     window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
+        if (window.pageYOffset > 250) {
             backToTop.classList.add('show');
         } else {
             backToTop.classList.remove('show');
@@ -103,43 +111,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
     backToTop.addEventListener('click', function() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        
-        // Fecha todos os cards expandidos ao voltar ao topo
-        document.querySelectorAll('.card.expanded').forEach(card => {
-            card.classList.remove('expanded');
-        });
-    });
-    
-    // Sistema de expansão dos cards
-    document.querySelectorAll('.card').forEach(card => {
-        card.addEventListener('click', function(e) {
-            // Não expandir se clicar em links dentro do card
-            if (e.target.tagName === 'A') return;
-            
-            // Fecha outros cards expandidos
-            document.querySelectorAll('.card.expanded').forEach(otherCard => {
-                if (otherCard !== this) {
-                    otherCard.classList.remove('expanded');
-                }
-            });
-            
-            // Alterna o estado do card clicado
-            this.classList.toggle('expanded');
-        });
-    });
-    
-    // Fecha cards ao clicar fora deles
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.card') && !e.target.closest('#menu') && !e.target.closest('.mobile-tabs')) {
-            document.querySelectorAll('.card.expanded').forEach(card => {
-                card.classList.remove('expanded');
-            });
-        }
+        closeModal();
     });
     
     // Animar elementos ao rolar
     const animateOnScroll = function() {
-        const elements = document.querySelectorAll('.card, .sidebar-section');
+        const elements = document.querySelectorAll('.poster, .about-section, .sidebar-section');
         
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
@@ -153,22 +130,35 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     // Inicializar animações
-    document.querySelectorAll('.card, .sidebar-section').forEach(el => {
+    document.querySelectorAll('.poster, .about-section, .sidebar-section').forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        el.style.transform = 'translateY(10px)';
+        el.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
     });
     
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Executar uma vez ao carregar
+    animateOnScroll();
     
-    // ===== SISTEMA DO CARROSSEL =====
-    
-    // Inicializar carrossel quando a aba Cinema for carregada
+    // ===== SISTEMA DO CARROSSEL PRINCIPAL =====
     initCarousel();
+    
+    // Inicializar sistemas adicionais
+    setTimeout(() => {
+        initHorizontalCarousels();
+        initPosterModal();
+    }, 300);
+    
+    // Funções auxiliares
+    function closeModal() {
+        const modal = document.getElementById('filmModal');
+        if (modal.classList.contains('show')) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    }
 });
 
-// Sistema do Carrossel
+// Sistema do Carrossel Principal
 function initCarousel() {
     const carouselData = [
         {
@@ -183,7 +173,6 @@ function initCarousel() {
             title: "Ratatouille",
             image: "https://image.tmdb.org/t/p/original/jQ6Vuxe1CEPMXTF7d0fZgdIBY8U.jpg"
         },
-        
         {
             title: "SpyXFamily",
             image: "https://image.tmdb.org/t/p/original/1BzFWEZROwAGjIpA4LI2hm1rqnB.jpg"
@@ -191,8 +180,7 @@ function initCarousel() {
         {
             title: "Viva a vida é uma festa",
             image: "https://image.tmdb.org/t/p/original/hWGEEuYpT0KnjEVRUYmNijjQ6G8.jpg"
-        },      
-        
+        }
     ];
 
     const awardedData = [
@@ -240,17 +228,23 @@ function initCarousel() {
                 </section>
             `;
 
-            // Inserir carrossel no início da seção Cinema
+            // Inserir carrossel após a seção "Sobre"
             const content = cinemaTab.querySelector('#content');
+            const aboutSection = content.querySelector('.about-section');
+            
             if (content) {
-                content.insertAdjacentHTML('afterbegin', carouselHTML);
+                if (aboutSection) {
+                    aboutSection.insertAdjacentHTML('afterend', carouselHTML);
+                } else {
+                    content.insertAdjacentHTML('afterbegin', carouselHTML);
+                }
                 
                 // Popular carrossel
                 const container = document.getElementById('carouselContainer');
                 const indicators = document.getElementById('carouselIndicators');
                 
                 carouselData.forEach((item, index) => {
-                    // Criar slide (apenas imagem, sem texto)
+                    // Criar slide
                     const slide = document.createElement('div');
                     slide.className = 'carousel-slide';
                     slide.innerHTML = `
@@ -288,36 +282,33 @@ function initCarousel() {
                 </div>
             `;
             
-            // Inserir antes da seção "Sobre"
-            const aboutSection = sidebar.querySelector('.sidebar-section');
-            if (aboutSection) {
-                aboutSection.insertAdjacentHTML('beforebegin', awardedHTML);
-                
-                // Popular filmes premiados
-                const awardedList = document.getElementById('awardedList');
-                awardedData.forEach(item => {
-                    const listItem = document.createElement('div');
-                    listItem.className = 'awarded-item';
-                    listItem.innerHTML = `
-                        <img src="${item.image}" alt="${item.title}" loading="lazy">
-                        <div class="awarded-info">
-                            <div class="awarded-title">${item.title}</div>
-                            <div class="awarded-meta">
-                                <span><i class="fas fa-star"></i> ${item.rating}</span>
-                                <span>•</span>
-                                <span>${item.year}</span>
-                                <span class="award-badge">${item.award}</span>
-                            </div>
+            // Inserir no sidebar
+            sidebar.insertAdjacentHTML('afterbegin', awardedHTML);
+            
+            // Popular filmes premiados
+            const awardedList = document.getElementById('awardedList');
+            awardedData.forEach(item => {
+                const listItem = document.createElement('div');
+                listItem.className = 'awarded-item';
+                listItem.innerHTML = `
+                    <img src="${item.image}" alt="${item.title}" loading="lazy">
+                    <div class="awarded-info">
+                        <div class="awarded-title">${item.title}</div>
+                        <div class="awarded-meta">
+                            <span><i class="fas fa-star"></i> ${item.rating}</span>
+                            <span>•</span>
+                            <span>${item.year}</span>
+                            <span class="award-badge">${item.award}</span>
                         </div>
-                    `;
-                    awardedList.appendChild(listItem);
-                });
-            }
+                    </div>
+                `;
+                awardedList.appendChild(listItem);
+            });
         }
     }
 }
 
-// Funções do carrossel (tornadas globais)
+// Funções do carrossel
 function updateCarousel() {
     const container = document.getElementById('carouselContainer');
     const indicators = document.querySelectorAll('.carousel-indicator');
@@ -358,4 +349,164 @@ function startCarouselAutoPlay() {
             updateCarousel();
         }
     }, 5000);
+}
+
+// ===== SISTEMA DE CARROSSÉIS HORIZONTAIS - CORRIGIDO =====
+function initHorizontalCarousels() {
+    // Configurar todos os carrosséis horizontais
+    const carousels = [
+        { 
+            prevBtn: document.getElementById('nowPlayingPrev'),
+            nextBtn: document.getElementById('nowPlayingNext'),
+            container: document.getElementById('nowPlayingContainer')
+        },
+        { 
+            prevBtn: document.getElementById('singleMoviesPrev'),
+            nextBtn: document.getElementById('singleMoviesNext'),
+            container: document.getElementById('singleMoviesContainer')
+        },
+        { 
+            prevBtn: document.getElementById('dragonPrev'),
+            nextBtn: document.getElementById('dragonNext'),
+            container: document.getElementById('dragonContainer')
+        },
+        { 
+            prevBtn: document.getElementById('dragonBallPrev'),
+            nextBtn: document.getElementById('dragonBallNext'),
+            container: document.getElementById('dragonBallContainer')
+        },
+        { 
+            prevBtn: document.getElementById('incrediblesPrev'),
+            nextBtn: document.getElementById('incrediblesNext'),
+            container: document.getElementById('incrediblesContainer')
+        },
+        { 
+            prevBtn: document.getElementById('spyFamilyPrev'),
+            nextBtn: document.getElementById('spyFamilyNext'),
+            container: document.getElementById('spyFamilyContainer')
+        }
+    ];
+    
+    carousels.forEach(carousel => {
+        if (carousel.prevBtn && carousel.nextBtn && carousel.container) {
+            setupCarouselNavigation(carousel.prevBtn, carousel.nextBtn, carousel.container);
+        }
+    });
+}
+
+function setupCarouselNavigation(prevBtn, nextBtn, container) {
+    if (!prevBtn || !nextBtn || !container) return;
+    
+    // Configurar scroll suave
+    const scrollAmount = 300; // Quantidade de pixels para rolar
+    
+    // Evento para botão anterior
+    prevBtn.addEventListener('click', () => {
+        container.scrollBy({
+            left: -scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Evento para botão próximo
+    nextBtn.addEventListener('click', () => {
+        container.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Atualizar visibilidade dos botões baseado na posição do scroll
+    const updateButtonVisibility = () => {
+        const scrollLeft = container.scrollLeft;
+        const maxScroll = container.scrollWidth - container.clientWidth;
+        
+        // Mostrar/ocultar botões baseado na posição do scroll
+        if (scrollLeft <= 10) {
+            prevBtn.style.opacity = '0.3';
+            prevBtn.style.pointerEvents = 'none';
+        } else {
+            prevBtn.style.opacity = '0.9';
+            prevBtn.style.pointerEvents = 'auto';
+        }
+        
+        if (scrollLeft >= maxScroll - 10) {
+            nextBtn.style.opacity = '0.3';
+            nextBtn.style.pointerEvents = 'none';
+        } else {
+            nextBtn.style.opacity = '0.9';
+            nextBtn.style.pointerEvents = 'auto';
+        }
+    };
+    
+    // Atualizar visibilidade inicial
+    updateButtonVisibility();
+    
+    // Atualizar visibilidade durante o scroll
+    container.addEventListener('scroll', updateButtonVisibility);
+    
+    // Atualizar visibilidade ao redimensionar a janela
+    window.addEventListener('resize', updateButtonVisibility);
+}
+
+// ===== SISTEMA DE MODAL PARA POSTERS =====
+function initPosterModal() {
+    const modal = document.getElementById('filmModal');
+    const closeButtons = document.querySelectorAll('.modal-close');
+    const posters = document.querySelectorAll('.poster');
+    
+    posters.forEach(poster => {
+        poster.addEventListener('click', function(e) {
+            // Obter dados dos atributos data-*
+            const title = this.getAttribute('data-title');
+            const year = this.getAttribute('data-year');
+            const description = this.getAttribute('data-description');
+            const rating = this.getAttribute('data-rating');
+            const status = this.getAttribute('data-status');
+            
+            // Preencher modal
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalYear').textContent = year;
+            
+            const modalRating = document.getElementById('modalRating');
+            if (rating === '-' || rating === '') {
+                modalRating.style.display = 'none';
+            } else {
+                modalRating.style.display = 'flex';
+                modalRating.innerHTML = `<i class="fas fa-star"></i> ${rating}`;
+            }
+            
+            const modalStatus = document.getElementById('modalStatus');
+            modalStatus.textContent = status;
+            modalStatus.setAttribute('data-status', status);
+            
+            document.getElementById('modalDescription').textContent = description || 'Sem descrição disponível.';
+            
+            // Mostrar modal
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    closeButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        });
+    });
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Fechar modal com ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            modal.classList.remove('show');
+            document.body.style.overflow = 'auto';
+        }
+    });
 }
