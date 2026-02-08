@@ -21,13 +21,13 @@
                 </a>
             </div>
             
-            <!-- Menu simplificado para mobile -->
+            <!-- Menu mobile -->
             <div class="mobile-tabs">
                 <a href="#cinema" class="mobile-tab active" data-tab="cinema">
-                    <i class="fas fa-film"></i> <span class="mobile-tab-text">Cinema</span>
+                    <i class="fas fa-film"></i>
                 </a>
                 <a href="#library" class="mobile-tab" data-tab="library">
-                    <i class="fas fa-book"></i> <span class="mobile-tab-text">Biblioteca</span>
+                    <i class="fas fa-book"></i>
                 </a>
             </div>
             
@@ -46,736 +46,630 @@
             <div id="cinema" class="tab-content active">
                 <div class="page-content">
                     <main id="content">
+                        <!-- Seção Sobre (acima do carrossel) -->
+                        <div class="about-section">
+                            <p class="about-text">
+                                <i class="fas fa-info-circle"></i>
+                                Avaliações feitas pelos críticos mais humildes (e melhores) do mundo do cinema.
+                            </p>
+                        </div>
+                        
                         <!-- Carrossel será inserido aqui via JavaScript -->
                         
-                       <div class="highlight-section">
-    <h3><i class="fas fa-ticket-alt"></i> Em Cartaz</h3>
-    <div class="cards-container">
+                        <div class="highlight-section">
+                            <h3><i class="fas fa-ticket-alt"></i> Em Cartaz</h3>
+                            <div class="carousel-wrapper">
+                                <button class="carousel-nav-btn prev" id="nowPlayingPrev">
+                                    <i class="fas fa-chevron-left"></i>
+                                </button>
+                                <div class="horizontal-carousel" id="nowPlayingCarousel">
+                                    <div class="horizontal-cards-container" id="nowPlayingContainer">
+<!-- Zootopia 2 -->
+<div class="poster"
+     data-title="Zootopia 2"
+     data-year="2025"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://image.tmdb.org/t/p/original/ofnTUoiK0EeYgyfZMo8wvavpItU.jpg" alt="Zootopia 2">
+</div>
 
-        <!-- Zootopia 2 -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://image.tmdb.org/t/p/original/ofnTUoiK0EeYgyfZMo8wvavpItU.jpg" alt="Zootopia 2">
-            </div>
-            <div class="card-content">
-                <h4>Zootopia 2</h4>
-                <p class="card-description">2025</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Wall-E -->
+<div class="poster"
+     data-title="Wall-E"
+     data-year="2008"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://image.tmdb.org/t/p/original/2TfYp0eMPrcKNjX6PTKGGQODjfF.jpg" alt="Wall-E">
+</div>
 
-        <!-- Wall-E -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://image.tmdb.org/t/p/original/2TfYp0eMPrcKNjX6PTKGGQODjfF.jpg" alt="Wall-E">
-            </div>
-            <div class="card-content">
-                <h4>Wall-E</h4>
-                <p class="card-description">2008</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Cada Um na Sua Casa -->
+<div class="poster"
+     data-title="Cada Um na Sua Casa"
+     data-year="2015"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/usFenYnk6mr8C62dB1MoAfSWMGR.jpg" alt="Cada Um na Sua Casa">
+</div>
 
-        <!-- Cada Um na Sua Casa -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/usFenYnk6mr8C62dB1MoAfSWMGR.jpg" alt="Cada Um na Sua Casa">
-            </div>
-            <div class="card-content">
-                <h4>Cada Um na Sua Casa</h4>
-                <p class="card-description">2015</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"> -</i></div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Barbie Vida de Sereia -->
+<div class="poster"
+     data-title="Barbie Vida de Sereia"
+     data-year="2010"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/rBOaZdOI9KVYWvwst6atceKtVT9.jpg" alt="Barbie Vida de Sereia">
+</div>
 
-        <!-- Barbie Vida de Sereia -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/rBOaZdOI9KVYWvwst6atceKtVT9.jpg" alt="Barbie Vida de Sereia">
-            </div>
-            <div class="card-content">
-                <h4>Barbie Vida de Sereia</h4>
-                <p class="card-description">2010</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Como treinar seu Dragão -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/vdGTQfWD43djVUInKxeSbeXyeIh.jpg" alt="Como treinar seu Dragão">
-            </div>
-            <div class="card-content">
-                <h4>Como treinar seu Dragão</h4>
-                <p class="card-description">2025</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Como treinar seu Dragão -->
+<div class="poster"
+     data-title="Como treinar seu Dragão"
+     data-year="2025"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/vdGTQfWD43djVUInKxeSbeXyeIh.jpg" alt="Como treinar seu Dragão">
+</div>
 
-        <!-- O Jardim das Palavras -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6TFbmnHFUxWEnqqjyf8gR2s5Hxf.jpg" alt="O Jardim das Palavras">
-            </div>
-            <div class="card-content">
-                <h4>O Jardim das Palavras</h4>
-                <p class="card-description">1988</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- O Jardim das Palavras -->
+<div class="poster"
+     data-title="O Jardim das Palavras"
+     data-year="1988"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6TFbmnHFUxWEnqqjyf8gR2s5Hxf.jpg" alt="O Jardim das Palavras">
+</div>
 
-        <!-- Meu Amigo Totoro -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://image.tmdb.org/t/p/original/23KKTxDg6rxZVc66bloQQdPSr29.jpg" alt="Meu Amigo Totoro">
-            </div>
-            <div class="card-content">
-                <h4>Meu Amigo Totoro</h4>
-                <p class="card-description">1988</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Meu Amigo Totoro -->
+<div class="poster"
+     data-title="Meu Amigo Totoro"
+     data-year="1988"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://image.tmdb.org/t/p/original/23KKTxDg6rxZVc66bloQQdPSr29.jpg" alt="Meu Amigo Totoro">
+</div>
 
-        <!-- Shrek 2 -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg" alt="Shrek 2">
-            </div>
-            <div class="card-content">
-                <h4>Shrek 2</h4>
-                <p class="card-description">2004</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Shrek 2 -->
+<div class="poster"
+     data-title="Shrek 2"
+     data-year="2004"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg" alt="Shrek 2">
+</div>
 
-        <!-- Sonic: O Filme -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/eOC0FSGqyzcnnx7XFgLazI9nACT.jpg" alt="Sonic: O Filme">
-            </div>
-            <div class="card-content">
-                <h4>Sonic: O Filme</h4>
-                <p class="card-description">2020</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Sonic: O Filme -->
+<div class="poster"
+     data-title="Sonic: O Filme"
+     data-year="2020"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/eOC0FSGqyzcnnx7XFgLazI9nACT.jpg" alt="Sonic: O Filme">
+</div>
 
-        <!-- Star Wars - O Império Contra-Ataca -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dLGT8b4Ut10z44uYLaip4QiwKta.jpg" alt="Star Wars - O Império Contra-Ataca">
-            </div>
-            <div class="card-content">
-                <h4>Star Wars - O Império Contra-Ataca</h4>
-                <p class="card-description">1980</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Star Wars - O Império Contra-Ataca -->
+<div class="poster"
+     data-title="Star Wars - O Império Contra-Ataca"
+     data-year="1980"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dLGT8b4Ut10z44uYLaip4QiwKta.jpg" alt="Star Wars - O Império Contra-Ataca">
+</div>
 
-        <!-- Homem-aranha: No Aranha verso -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ejqquyk7r3GLXPir62rksUmPKj5.jpg" alt="Homem-aranha: No Aranha verso">
-            </div>
-            <div class="card-content">
-                <h4>Homem-aranha: No Aranha verso</h4>
-                <p class="card-description">2018</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Homem-aranha: No Aranha verso -->
+<div class="poster"
+     data-title="Homem-aranha: No Aranha verso"
+     data-year="2018"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ejqquyk7r3GLXPir62rksUmPKj5.jpg" alt="Homem-aranha: No Aranha verso">
+</div>
 
-        <!-- Star Wars - Uma nova esperança -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dw7X9YPjjAfIxKHW04V64Bb9TB0.jpg" alt="Star Wars - Uma nova esperança">
-            </div>
-            <div class="card-content">
-                <h4>Star Wars - Uma nova esperança</h4>
-                <p class="card-description">1977</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- Star Wars - Uma nova esperança -->
+<div class="poster"
+     data-title="Star Wars - Uma nova esperança"
+     data-year="1977"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/dw7X9YPjjAfIxKHW04V64Bb9TB0.jpg" alt="Star Wars - Uma nova esperança">
+</div>
 
-        <!-- O Tempo com Você -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://image.tmdb.org/t/p/original/tdBhe9LVIBKMgfGYJSkY2dVqfaz.jpg" alt="O Tempo com Você">
-            </div>
-            <div class="card-content">
-                <h4>O Tempo com Você</h4>
-                <p class="card-description">2019</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-watched">Assistido</div>
-                </div>
-            </div>
-        </div>
+<!-- O Tempo com Você -->
+<div class="poster"
+     data-title="O Tempo com Você"
+     data-year="2019"
+     data-description=""
+     data-rating="0.0"
+     data-status="Assistido">
+    <img src="https://image.tmdb.org/t/p/original/tdBhe9LVIBKMgfGYJSkY2dVqfaz.jpg" alt="O Tempo com Você">
+</div>
 
-        <!-- De volta para o futuro II -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pbX7hM03cHmpMPbpZ3lYmF2aABK.jpg" alt="De volta para o futuro II">
-            </div>
-            <div class="card-content">
-                <h4>De volta para o futuro II</h4>
-                <p class="card-description">1989</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-unwatched">Não assistido</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Your Name -->
-        <div class="card">
-            <div class="card-badge">Filme</div>
-            <div class="card-cover">
-                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iwWGMrybix3DZ4V7TJEL0IPURWT.jpg" alt="Your Name">
-            </div>
-            <div class="card-content">
-                <h4>Your Name</h4>
-                <p class="card-description">2016</p>
-                <div class="card-meta">
-                    <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                    <div class="card-tag tag-watched">Assistido</div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- De volta para o futuro II -->
+<div class="poster"
+     data-title="De volta para o futuro II"
+     data-year="1989"
+     data-description=""
+     data-rating="0.0"
+     data-status="Não assistido">
+    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pbX7hM03cHmpMPbpZ3lYmF2aABK.jpg" alt="De volta para o futuro II">
 </div>
                         
-                      
+                                </div>
+                                <button class="carousel-nav-btn next" id="nowPlayingNext">
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
                         <div class="highlight-section">
                             <h3><i class="fas fa-film"></i> Todos os Filmes</h3>
-                            <div class="cards-container">
-
-
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/TQtQcckcXwkWxcij6JxJiyVXkG.jpg" alt="Dragon Ball Z: Bardock, O Pai de Goku - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Dragon Ball Z: Bardock, O Pai de Goku</h4>
-                                        <p class="card-description">Positivo: Bom para saber mais sobre os sayajins. <br> Negativo: A morte do Bardock é rápida e não fala sobre a mãe do Goku.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 6.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
+                            
+                            <!-- Seção: Sem Saga -->
+                            <div class="section-with-title">
+                                <h4 class="section-title">Único</h4>
+                                <div class="carousel-wrapper">
+                                    <button class="carousel-nav-btn prev" id="singleMoviesPrev">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <div class="horizontal-carousel">
+                                        <div class="horizontal-cards-container" id="singleMoviesContainer">
+                                            <!-- Cinco Centímetros Por Segundo -->
+                                            <div class="poster"
+                                                 data-title="Cinco Centímetros Por Segundo"
+                                                 data-year="2007"
+                                                 data-description="Positivo: A animação é muito boa. Negativo: O filme é muito curto, dificulta o entendimento."
+                                                 data-rating="6"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/nW3xo4CjqAo67cOoJlJ5zB0cH27.jpg" alt="Cinco centímetros Por Segundo">
+                                            </div>
+                                            
+                                            <!-- A Família do Futuro -->
+                                            <div class="poster"
+                                                 data-title="A Família do Futuro"
+                                                 data-year="2007"
+                                                 data-description="Positivo: Engraçado com boa história e plot twist. Negativo: Não tem."
+                                                 data-rating="9.9"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/uR9rV69x4saB2vh9yfgQ5PA5E0r.jpg" alt="A Familia do Futuro">
+                                            </div>
+                                            
+                                            <!-- Gigante de ferro -->
+                                            <div class="poster"
+                                                 data-title="Gigante de ferro"
+                                                 data-year="1999"
+                                                 data-description="História de um robô que veio do espaço e se alimenta de ferro"
+                                                 data-rating="7.5"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z3SdBaZJq1L5rkfzJoDAGal3Vjx.jpg" alt="Gigante de ferro">
+                                            </div>
+                                                                                 
+                                            <!-- Planeta do Tesouro -->
+                                            <div class="poster"
+                                                 data-title="Planeta do Tesouro"
+                                                 data-year="2002"
+                                                 data-description="Aventura espacial da boa com o Espuma e a rapazeada."
+                                                 data-rating="10"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sm5hbgef2XiHj89vRf5cjBOzOmT.jpg" alt="Planeta do Tesouro">
+                                            </div>
+                                            
+                                            <!-- Mufasa: O Rei Leão -->
+                                            <div class="poster"
+                                                 data-title="Mufasa: O Rei Leão"
+                                                 data-year="2024"
+                                                 data-description="Leões que cantam enquanto atuam. Muita Aura."
+                                                 data-rating="10"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iMVuv6Gz5fj7vZ51IjRF3AiW87y.jpg" alt="Mufasa: O Rei Leão">
+                                            </div>
+                                            
+                                            <!-- Mario: Super Bros -->
+                                            <div class="poster"
+                                                 data-title="Mario: Super Bros"
+                                                 data-year="2023"
+                                                 data-description="Mario e Luigi precisam resgatas a Peach"
+                                                 data-rating="6"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kzYbNJ4JaQiRny0cDi8a6bNX5w3.jpg" alt="Mario: Super Bros">
+                                            </div>
+                                            
+                                            <!-- Rio -->
+                                            <div class="poster"
+                                                 data-title="Rio"
+                                                 data-year="2011"
+                                                 data-description="Rio fica acorrentado e acaba se apaixonando"
+                                                 data-rating="9"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pPvCSyQCY6Xtl78Qo9o0YStUj6o.jpg" alt="Rio">
+                                            </div>
+                                            
+                                            <!-- Para todos os garotos que já amei -->
+                                            <div class="poster"
+                                                 data-title="Para todos os garotos que já amei"
+                                                 data-year="2018"
+                                                 data-description="Lara Jeans envia cartas sem querer."
+                                                 data-rating="7.5"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/76sdtdElf7R20KKNWxKKBP7UxWz.jpg" alt="Para todos os garotos que já amei">
+                                            </div>
+                                            
+                                            <!-- Possibly the GAAT -->
+                                            <div class="poster"
+                                                 data-title="Possibly the GAAT"
+                                                 data-year="2023"
+                                                 data-description="Anime diferente de humor"
+                                                 data-rating="-"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4TyTS9O7ECH3mXpazQ6GpJXCqNm.jpg" alt="Possibly the greatest AAT">
+                                            </div>
+                                            
+                                            <!-- Diários de uma apotecária -->
+                                            <div class="poster"
+                                                 data-title="Diários de uma apotecária"
+                                                 data-year="2023"
+                                                 data-description="Um arrasador de corações e uma mulher que gosta de beber veneno."
+                                                 data-rating="-"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t8fC3K3XnwE6Iso6b1bi5Fdo93n.jpg" alt="Diários de uma apotecária">
+                                            </div>
+                                            
+                                            <!-- Erased -->
+                                            <div class="poster"
+                                                 data-title="Erased"
+                                                 data-year="2016"
+                                                 data-description="Anime completo, drama, ação e uma boa história."
+                                                 data-rating="9.7"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/EljUwZJhpuYfVuSfqY8Pt1xxpH.jpg" alt="Erased">
+                                            </div>
+                                            
+                                            <!-- A voz do silêncio -->
+                                            <div class="poster"
+                                                 data-title="A voz do silêncio"
+                                                 data-year="2016"
+                                                 data-description="Do Bullying ao Romance."
+                                                 data-rating="6"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2lDneiW73fbtDEIlemzq6Bv2vuR.jpg" alt="A voz do silêncio">
+                                            </div>
+                                            
+                                            <!-- La la land -->
+                                            <div class="poster"
+                                                 data-title="La la land"
+                                                 data-year="2016"
+                                                 data-description="Musical para confundir o público."
+                                                 data-rating="2.0"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yArr9VMatOTEMRZ0H1s8pNHQW78.jpg" alt="La la land">
+                                            </div>
+                                            
+                                            <!-- O Senhor dos Anéis -->
+                                            <div class="poster"
+                                                 data-title="O Senhor dos Anéis"
+                                                 data-year="2001"
+                                                 data-description="Épica jornada com um mago gente boa, um anão engraçado e a galera."
+                                                 data-rating="8.5"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7oPNnmHicGG1eDYTpInGK0jqDa9.jpg" alt="O Senhor dos Anéis">
+                                            </div>
+                                            
+                                            <!-- Puppy Love -->
+                                            <div class="poster"
+                                                 data-title="Puppy Love"
+                                                 data-year="2023"
+                                                 data-description=""
+                                                 data-rating="5"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rSjaizM0hpUYt9Fa5HrGBnrm597.jpg" alt="Puppy Love">
+                                            </div>
+                                            
+                                            <!-- Your Name -->
+                                            <div class="poster"
+                                                 data-title="Your Name"
+                                                 data-year="2016"
+                                                 data-description="Duas pessoas estão vivendo a vida e percebem que trocaram de corpo."
+                                                 data-rating="8.5"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iwWGMrybix3DZ4V7TJEL0IPURWT.jpg" alt="Your Name">
+                                            </div>
+                                            
+                                            <!-- De volta para o Futuro -->
+                                            <div class="poster"
+                                                 data-title="De volta para o Futuro"
+                                                 data-year="1985"
+                                                 data-description="Filme atemporal de viagem no tempo."
+                                                 data-rating="9.9"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/i996T0lI1fGtFEowiH3V6eZthL0.jpg" alt="De volta para o Futuro">
+                                            </div>
+                                            
+                                            <!-- Enrolados -->
+                                            <div class="poster"
+                                                 data-title="Enrolados"
+                                                 data-year="2010"
+                                                 data-description="Rapunzel moderna, cansada da vida na torre, quer curtir a vida com o Bezerra."
+                                                 data-rating="10"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lFmcvykdQwGjVOJEQB0t0hwCX9c.jpg" alt="Enrolados">
+                                            </div>
+                                            
+                                            <!-- Suzume -->
+                                            <div class="poster"
+                                                 data-title="Suzume"
+                                                 data-year="2022"
+                                                 data-description="Portais malucos, cadeira e o gato. É confuso, mas tem alguns pontos legais."
+                                                 data-rating="7"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/QcS3MhdUiOEUOjY451FOFInZXF.jpg" alt="Suzume">
+                                            </div>
+                                            
+                                            <!-- Viva a vida é uma festa -->
+                                            <div class="poster"
+                                                 data-title="Viva a vida é uma festa"
+                                                 data-year="2017"
+                                                 data-description="O que deixamos em vida, é levado por aqueles que lembram."
+                                                 data-rating="7.5"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/obpbBBgRLjTvTgfvQxA3dzMXOk6.jpg" alt="Viva a vida é uma festa">
+                                            </div>
+                                            
+                                            <!-- O Pior vizinho do mundo -->
+                                            <div class="poster"
+                                                 data-title="O Pior vizinho do mundo"
+                                                 data-year="2022"
+                                                 data-description="Cansado da vida que leva, encontro Otto motivo pelo qual viver."
+                                                 data-rating="10"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oXHNdN1hjg6RFQ5NP618KSAIrdE.jpg" alt="O Pior vizinho do mundo">
+                                            </div>
+                                            
+                                            <!-- Big Hero 6 -->
+                                            <div class="poster"
+                                                 data-title="Big Hero 6"
+                                                 data-year="2014"
+                                                 data-description="Robô da paz e o time."
+                                                 data-rating="8.5"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zBDs1y1fK921HrhdRMqlloUqp5Z.jpg" alt="Big Hero 6">
+                                            </div>
+                                            
+                                            <!-- Tinker Bell -->
+                                            <div class="poster"
+                                                 data-title="Tinker Bell"
+                                                 data-year="2008"
+                                                 data-description="Uma fada com talento de consertar os trem e um rato chamado queijo."
+                                                 data-rating="7.5"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/azgjMUMoUJB2yheVcN1Ae8lFNeD.jpg" alt="Tinker Bell">
+                                            </div>
                                         </div>
+                                    </div>
+                                    <button class="carousel-nav-btn next" id="singleMoviesNext">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- Seção: Filmes com Saga -->
+                            <div class="section-with-title">
+                                <h4 class="section-title">Saga</h4>
+                                
+                                <!-- Subseção: Como Treinar Seu Dragão -->
+                                <div class="franchise-section">
+                                    <h5 class="franchise-subtitle">Como Treinar Seu Dragão</h5>
+                                    <div class="carousel-wrapper">
+                                        <button class="carousel-nav-btn prev" id="dragonPrev">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <div class="horizontal-carousel">
+                                            <div class="horizontal-cards-container" id="dragonContainer">
+                                                <div class="poster"
+                                                     data-title="Como treinar seu Dragão"
+                                                     data-year="2010"
+                                                     data-description="Épico"
+                                                     data-rating="10"
+                                                     data-status="Assistido">
+                                                    <img src="https://image.tmdb.org/t/p/original/sLpQSFj8A5jyUZStwzWfKpoJoAx.jpg" alt="Como treinar seu Dragão">
+                                                </div>
+                                                
+                                                <div class="poster"
+                                                     data-title="Como treinar seu Dragão 2"
+                                                     data-year="2014"
+                                                     data-description="Soluço descobre de onde vem os talentos com dragões."
+                                                     data-rating="9.9"
+                                                     data-status="Assistido">
+                                                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/brmRmSagvnQVgIw1lBF4CaKpaoU.jpg" alt="Como treinar seu Dragão 2">
+                                                </div>
+                                                
+                                                <div class="poster"
+                                                     data-title="Como treinar seu Dragão 3"
+                                                     data-year="2019"
+                                                     data-description="Banguela usa toda sua sedução para descolar um par."
+                                                     data-rating="9.9"
+                                                     data-status="Assistido">
+                                                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5uqxMHM7YLKk6yni4bOE0D6DVz8.jpg" alt="Como treinar seu Dragão 3">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <button class="carousel-nav-btn next" id="dragonNext">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
                                     </div>
                                 </div>
-
-
-                                 <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/nW3xo4CjqAo67cOoJlJ5zB0cH27.jpg" alt="Cinco centímetros Por Segundo - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Cinco Centímetros Por Segundo.</h4>
-                                        <p class="card-description">Positivo: A animação é muito boa. <br> Negativo: O filme é muito curto, dificulta o entendimento.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 6</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
+                                
+                                <!-- Subseção: Dragon Ball -->
+                                <div class="franchise-section">
+                                    <h5 class="franchise-subtitle">Dragon Ball</h5>
+                                    <div class="carousel-wrapper">
+                                        <button class="carousel-nav-btn prev" id="dragonBallPrev">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <div class="horizontal-carousel">
+                                            <div class="horizontal-cards-container" id="dragonBallContainer">
+                                              
+                                              <!-- Dragon Ball Z: Bardock, O Pai de Goku -->
+                                                <div class="poster"
+                                                     data-title="Dragon Ball Z: Bardock, O Pai de Goku"
+                                                     data-year="1990"
+                                                     data-description="Positivo: Bom para saber mais sobre os sayajins. Negativo: A morte do Bardock é rápida e não fala sobre a mãe do Goku."
+                                                     data-rating="6.5"
+                                                     data-status="Assistido">
+                                                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/TQtQcckcXwkWxcij6JxJiyVXkG.jpg" alt="Dragon Ball Z: Bardock, O Pai de Goku">
+                                                </div>
+                                                
+                                                <!-- Dragon Ball Z - A batalha dos Deuses -->
+                                                <div class="poster"
+                                                     data-title="Dragon Ball Z - Batalha dos Deuses"
+                                                     data-year="2013"
+                                                     data-description="Despertar de um deus, e brigas por pudim."
+                                                     data-rating="8.7"
+                                                     data-status="Assistido">
+                                                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sF8ZL7ALPQWqvlg0FPE2fgdXOkR.jpg" alt="Dragon Ball Z - A batalha dos Deuses">
+                                                </div>
+                                            </div>
                                         </div>
+                                        <button class="carousel-nav-btn next" id="dragonBallNext">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
                                     </div>
                                 </div>
-
-
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_face/uR9rV69x4saB2vh9yfgQ5PA5E0r.jpg" alt="A Familia do Futuro - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>A Família do Futuro</h4>
-                                        <p class="card-description">Positivo: Engraçado com boa história e plot twist. <br> Negativo: Não tem.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 9.9</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
+                                
+                                <!-- Subseção: Os Incríveis -->
+                                <div class="franchise-section">
+                                    <h5 class="franchise-subtitle">Os Incríveis</h5>
+                                    <div class="carousel-wrapper">
+                                        <button class="carousel-nav-btn prev" id="incrediblesPrev">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <div class="horizontal-carousel">
+                                            <div class="horizontal-cards-container" id="incrediblesContainer">
+                                                <div class="poster"
+                                                     data-title="Os Incríveis"
+                                                     data-year="2004"
+                                                     data-description="Uma família de super-heróis tenta viver uma vida normal no subúrbio."
+                                                     data-rating="10"
+                                                     data-status="Assistido">
+                                                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z8k5EhZZTLsCRF8NWjSe6snWNZg.jpg" alt="Os Incríveis">
+                                                </div>
+                                                
+                                                <div class="poster"
+                                                     data-title="Os Incríveis 2"
+                                                     data-year="2018"
+                                                     data-description="Lutas em família, e zezé farmando poderes."
+                                                     data-rating="9.5"
+                                                     data-status="Assistido">
+                                                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6et98yxnctR6uH16x3uJuIVKsPf.jpg" alt="Os Incríveis 2">
+                                                </div>
+                                            </div>
                                         </div>
+                                        <button class="carousel-nav-btn next" id="incrediblesNext">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
                                     </div>
                                 </div>
-                               
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/5uqxMHM7YLKk6yni4bOE0D6DVz8.jpg" alt="Como treinar seu Dragão 3 - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Como treinar seu Dragão 3</h4>
-                                        <p class="card-description">Banguela usa toda sua sedução para descolar um par.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 9.9</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
+                                
+                                 <div class="franchise-section">
+                                    <h5 class="franchise-subtitle">Shrek</h5>
+                                    <div class="carousel-wrapper">
+                                        <button class="carousel-nav-btn prev" id="shrekPrev">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <div class="horizontal-carousel">
+                                            <div class="horizontal-cards-container" id="sherkContainer">
+                                                <!-- Sherk -->
+                                            <div class="poster"
+                                                 data-title="Shrek"
+                                                 data-year="2001"
+                                                 data-description="Shrek ensina que cebolas tem camadas, resgata uma princesa, e ainda faz amizades."
+                                                 data-rating="9"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg" alt="Shrek">
+                                            </div>
+                                          </div>
                                         </div>
+                                        <button class="carousel-nav-btn next" id="shrekNext">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
                                     </div>
                                 </div>
-
-                                <!-- Card 2: Gigante de ferro -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z3SdBaZJq1L5rkfzJoDAGal3Vjx.jpg" alt="Gigante de ferro - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Gigante de ferro</h4>
-                                        <p class="card-description">História de um robô que veio do espaço e se alimenta de ferro</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 7.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
+                                                               
+                                
+                                <!-- Subseção: Spy x Family -->
+                                <div class="franchise-section">
+                                    <h5 class="franchise-subtitle">Spy x Family</h5>
+                                    <div class="carousel-wrapper">
+                                        <button class="carousel-nav-btn prev" id="spyFamilyPrev">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <div class="horizontal-carousel">
+                                            <div class="horizontal-cards-container" id="spyFamilyContainer">
+                                                <!-- SPY x FAMILY CÓDIGO: Branco -->
+                                                <div class="poster"
+                                                     data-title="SPY x FAMILY CÓDIGO: Branco"
+                                                     data-year="2023"
+                                                     data-description="Confusão pelo chocolate roubado e acerto de contas."
+                                                     data-rating="10"
+                                                     data-status="Assistido">
+                                                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/thGaW3UXecNJAEdB6rs8sC45JWv.jpg" alt="SPY x FAMILY CÓDIGO: Branco">
+                                                </div>
+                                                
+                                                <!-- Spy x Family (Série) -->
+                                                <div class="poster"
+                                                     data-title="Spy x Family"
+                                                     data-year="2022"
+                                                     data-description="Um detetive, uma assasina e uma criança adorável formam uma família verdadeira."
+                                                     data-rating="10"
+                                                     data-status="Assistido">
+                                                    <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yY8JGpdwAiT9ZKaOzQJHIa6E4Ga.jpg" alt="Spy x Family">
+                                                </div>
+                                            </div>
                                         </div>
+                                        <button class="carousel-nav-btn next" id="spyFamilyNext">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
                                     </div>
-                                </div>
+                                  </div>
+                            
+                                <!-- De volta para o futuro  -->
+                                <div class="franchise-section">
+                                    <h5 class="franchise-subtitle">De Volta Para o Futuro</h5>
+                                    <div class="carousel-wrapper">
+                                        <button class="carousel-nav-btn prev" id="devoltaprofuturoPrev">
+                                            <i class="fas fa-chevron-left"></i>
+                                        </button>
+                                        <div class="horizontal-carousel">
+                                            <div class="horizontal-cards-container" id="devoltaprofuturoContainer">
 
-                                <!-- Card 3: Os Incríveis -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/z8k5EhZZTLsCRF8NWjSe6snWNZg.jpg" alt="Os Incríveis - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Os Incríveis</h4>
-                                        <p class="card-description"></p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
+                                            <!-- De volta para o Futuro -->
+                                            <div class="poster"
+                                                 data-title="De volta para o Futuro"
+                                                 data-year="1985"
+                                                 data-description="Filme atemporal de viagem no tempo."
+                                                 data-rating="9.9"
+                                                 data-status="Assistido">
+                                                <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/i996T0lI1fGtFEowiH3V6eZthL0.jpg" alt="De volta para o Futuro">
+                                            </div>
+                                            </div>
                                         </div>
+                                        <button class="carousel-nav-btn next" id="devoltaprofuturoNext">
+                                            <i class="fas fa-chevron-right"></i>
+                                        </button>
                                     </div>
-                                </div>
+                                  </div>
 
-                                <!-- Card 4: Shrek -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg" alt="Shrek - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Shrek</h4>
-                                        <p class="card-description">Shrek ensina que cebolas tem camadas, resgata uma princesa, e ainda faz amizades.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 9</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <!-- Card 5: Planeta do Tesouro -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sm5hbgef2XiHj89vRf5cjBOzOmT.jpg" alt="Planeta do Tesouro - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Planeta do Tesouro</h4>
-                                        <p class="card-description">Aventura espacial da boa com o Espuma e a rapazeada.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <!-- Card 6: Dragon Ball Z - A batalha dos Deuses -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/sF8ZL7ALPQWqvlg0FPE2fgdXOkR.jpg" alt="Dragon Ball Z - A batalha dos Deuses - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Dragon Ball Z - Batalha dos Deuses</h4>
-                                        <p class="card-description">Despertar de um deus, e brigas por pudim.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 8.7</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 7: Mufasa: O Rei Leão -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iMVuv6Gz5fj7vZ51IjRF3AiW87y.jpg" alt="Mufasa: O Rei Leão - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Mufasa: O Rei Leão</h4>
-                                        <p class="card-description">Leões que cantam enquanto atuam. Muita Aura.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 8: Mario: Super Bros -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kzYbNJ4JaQiRny0cDi8a6bNX5w3.jpg" alt="Mario: Super Bros - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Mario: Super Bros</h4>
-                                        <p class="card-description">Mario e Luigi precisam resgatas a Peach</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 6</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 9: Rio -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/pPvCSyQCY6Xtl78Qo9o0YStUj6o.jpg" alt="Rio - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Rio</h4>
-                                        <p class="card-description">Rio fica acorrentado e acaba se apaixonando</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 9</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 10: Para todos os garotos que já amei -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/76sdtdElf7R20KKNWxKKBP7UxWz.jpg" alt="Para todos os garotos que já amei - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Para todos os garotos que já amei</h4>
-                                        <p class="card-description">Lara Jeans envia cartas sem querer.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 7.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 11: Possibly the greatest AAT -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/4TyTS9O7ECH3mXpazQ6GpJXCqNm.jpg" alt="Possibly the greatest AAT - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Possibly the GAAT</h4>
-                                        <p class="card-description">Anime diferente de humor</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 12: Diários de uma apotecária -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/t8fC3K3XnwE6Iso6b1bi5Fdo93n.jpg" alt="Diários de uma apotecária - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Diários de uma apotecária</h4>
-                                        <p class="card-description">Um arrasador de corações e uma mulher que gosta de beber veneno.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 13: Erased -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/EljUwZJhpuYfVuSfqY8Pt1xxpH.jpg" alt="Erased - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Erased</h4>
-                                        <p class="card-description">Anime completo, drama, ação e uma boa história.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 9.7</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 14: A voz do silêncio -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/2lDneiW73fbtDEIlemzq6Bv2vuR.jpg" alt="A voz do silêncio - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>A voz do silêncio</h4>
-                                        <p class="card-description">Do Bullying ao Romance.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 6</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 15: La la land -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yArr9VMatOTEMRZ0H1s8pNHQW78.jpg" alt="La la land - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>La la land</h4>
-                                        <p class="card-description">Musical para confundir o público.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 2.0</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 16: O Senhor dos Anéis -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7oPNnmHicGG1eDYTpInGK0jqDa9.jpg" alt="O Senhor dos Anéis - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>O Senhor dos Anéis</h4>
-                                        <p class="card-description">Épica jornada com um mago gente boa, um anão engraçado e a galera.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 8.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 17: SPY x FAMILY CÓDIGO: Branco -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/thGaW3UXecNJAEdB6rs8sC45JWv.jpg" alt="SPY x FAMILY CÓDIGO: Branco - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>SPY x FAMILY CÓDIGO: Branco</h4>
-                                        <p class="card-description">Confusão pelo chocolate roubado e acerto de contas.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 18: Puppy Love -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/rSjaizM0hpUYt9Fa5HrGBnrm597.jpg" alt="Puppy Love - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Puppy Love</h4>
-                                        <p class="card-description"></p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 19: Your Name -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/iwWGMrybix3DZ4V7TJEL0IPURWT.jpg" alt="Your Name - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Your Name</h4>
-                                        <p class="card-description">Duas pessoas estão vivendo a vida e percebem que trocaram de corpo.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 8.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 20: Como treinar seu Dragão 2 -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/brmRmSagvnQVgIw1lBF4CaKpaoU.jpg" alt="Como treinar seu Dragão 2 - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Como treinar seu Dragão 2</h4>
-                                        <p class="card-description">Soluço descobre de onde vem os talentos com dragãoes.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 9.9</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 21: Os Incríveis 2 -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/6et98yxnctR6uH16x3uJuIVKsPf.jpg" alt="Os Incríveis 2 - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Os Incríveis 2</h4>
-                                        <p class="card-description">Lutas em família, e zezé farmando poderes.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 9.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 22: De volta para o Futuro -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/i996T0lI1fGtFEowiH3V6eZthL0.jpg" alt="De volta para o Futuro - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>De volta para o Futuro</h4>
-                                        <p class="card-description">Filme atemporal de viagem no tempo.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 9.9</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 23: Enrolados -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lFmcvykdQwGjVOJEQB0t0hwCX9c.jpg" alt="Enrolados - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Enrolados</h4>
-                                        <p class="card-description">Rapunzel moderna, cansada da vida na torre, quer curtir a vida com o Bezerra.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 24: Suzume -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/QcS3MhdUiOEUOjY451FOFInZXF.jpg" alt="Suzume - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Suzume</h4>
-                                        <p class="card-description">Portais malucos, cadeira e o gato. É confuso, mas tem alguns pontos legais.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 7</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 25: Viva a vida é uma festa -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/obpbBBgRLjTvTgfvQxA3dzMXOk6.jpg" alt="Viva a vida é uma festa - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Viva a vida é uma festa</h4>
-                                        <p class="card-description">O que deixamos em vida, é levado por aqueles que lembram.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 7.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 26: Spy x Family -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/yY8JGpdwAiT9ZKaOzQJHIa6E4Ga.jpg" alt="Spy x Family - Poster da série">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Spy x Family</h4>
-                                        <p class="card-description">Um detetive, uma assasina e uma criança adorável formam uma família verdadeira.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 27: O Pior vizinho do mundo -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/oXHNdN1hjg6RFQ5NP618KSAIrdE.jpg" alt="O Pior vizinho do mundo - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>O Pior vizinho do mundo</h4>
-                                        <p class="card-description">Cansado da vida que leva, encontro Otto motivo pelo qual viver.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 28: Big Hero 6 -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/zBDs1y1fK921HrhdRMqlloUqp5Z.jpg" alt="Big Hero 6 - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Big Hero 6</h4>
-                                        <p class="card-description">Robô da paz e o time.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 8.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Card 29: Tinker Bell -->
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/azgjMUMoUJB2yheVcN1Ae8lFNeD.jpg" alt="Tinker Bell - Poster do filme">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>Tinker Bell</h4>
-                                        <p class="card-description">Uma fada com talento de consertar os trem e um rato chamado queijo.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 7.5</div>
-                                            <div class="card-tag tag-watched">Assistido</div>
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -783,11 +677,6 @@
                     
                     <aside id="sidebar">
                         <!-- Filmes Premiados será inserido aqui via JavaScript -->
-                        
-                        <div class="sidebar-section">
-                            <h3><i class="fas fa-info-circle blue-icon"></i> Sobre as Avaliações</h3>
-                            <p class="info-text">Avaliações feitas pelos críticos mais humildes (e melhores) do mundo do cinema.</p>
-                        </div>
                     </aside>
                 </div>
             </div>
@@ -795,23 +684,26 @@
             <div id="library" class="tab-content">
                 <div class="page-content">
                     <main id="content">
+                        <!-- Seção Sobre para Biblioteca -->
+                        <div class="about-section">
+                            <p class="about-text">
+                                <i class="fas fa-info-circle"></i>
+                                Lugar para saborear um café ou Toddynho e conferir os livros. (não esquece de beber água 🙂)
+                            </p>
+                        </div>
+                        
                         <h2>Biblioteca</h2>
                         
                         <div class="highlight-section">
                             <h3><i class="fas fa-check-circle"></i> Livros Lidos</h3>
                             <div class="cards-container">
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://m.media-amazon.com/images/I/81R+oTGHiYL._SY466_.jpg" alt="Livro As estrelas sempre brilham acima das nuvens escuras">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>As estrelas sempre brilham acima das nuvens escuras</h4>
-                                        <p class="card-description">Vicky vai parar no futuro e não sabe como voltar para seu tempo atual.</p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> 10</div>
-                                            <div class="card-tag tag-read">Lido</div>
-                                        </div>
-                                    </div>
+                                <div class="poster"
+                                     data-title="As estrelas sempre brilham acima das nuvens escuras"
+                                     data-year="2022"
+                                     data-description="Vicky vai parar no futuro e não sabe como voltar para seu tempo atual."
+                                     data-rating="10"
+                                     data-status="Lido">
+                                    <img src="https://m.media-amazon.com/images/I/81R+oTGHiYL._SY466_.jpg" alt="Livro As estrelas sempre brilham acima das nuvens escuras">
                                 </div>
                             </div>
                         </div>
@@ -819,30 +711,38 @@
                         <div class="highlight-section">
                             <h3><i class="fas fa-bookmark"></i> Para Ler</h3>
                             <div class="cards-container">
-                                <div class="card">
-                                    <div class="card-cover">
-                                        <img src="https://m.media-amazon.com/images/I/81w+TPxOtBL._SL1500_.jpg" alt="Livro A Escolha do Verão">
-                                    </div>
-                                    <div class="card-content">
-                                        <h4>A Escolha do Verão</h4>
-                                        <p class="card-description"></p>
-                                        <div class="card-meta">
-                                            <div class="card-rating"><i class="fas fa-star"></i> -</div>
-                                            <div class="card-tag tag-unread">Não Lido</div>
-                                        </div>
-                                    </div>
+                                <div class="poster"
+                                     data-title="A Escolha do Verão"
+                                     data-year="2023"
+                                     data-description=""
+                                     data-rating="-"
+                                     data-status="Não Lido">
+                                    <img src="https://m.media-amazon.com/images/I/81w+TPxOtBL._SL1500_.jpg" alt="Livro A Escolha do Verão">
                                 </div>
                             </div>
                         </div>
                     </main>
                     
                     <aside id="sidebar">
-                        <div class="sidebar-section">
-                            <h3><i class="fas fa-info-circle blue-icon"></i> Sobre a Biblioteca</h3>
-                            <p class="info-text">Lugar para saborear um café ou Toddynho e conferir os livros. (não esquece de beber água 🙂)</p>
-                        </div>
+                        <!-- Nada no sidebar da biblioteca -->
                     </aside>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal simplificado -->
+    <div id="filmModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-info">
+                <h2 id="modalTitle"></h2>
+                <div class="modal-meta">
+                    <span id="modalYear"></span>
+                    <span class="modal-rating" id="modalRating"></span>
+                    <span class="modal-status" id="modalStatus"></span>
+                </div>
+                <p id="modalDescription"></p>
             </div>
         </div>
     </div>
@@ -853,9 +753,8 @@
 
     <footer id="footer">
         <div class="footer-content">
-            <div class="footer-logo" style="color: white;">absolute</div>
+            <div class="footer-logo">absolute</div>
             <div class="social-links">
-                <!-- Substitua SEU_USER_TWITCH pelo seu usuário da Twitch -->
                 <a href="https://www.twitch.tv/absolute_romance" class="social-link" target="_blank" rel="noopener"><i class="fab fa-twitch"></i></a>
             </div>
             <p>&copy; 2026 absolute. Todos os direitos reservados.</p>
