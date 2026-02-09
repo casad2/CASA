@@ -162,24 +162,24 @@ document.addEventListener('DOMContentLoaded', function() {
 function initCarousel() {
     const carouselData = [
         {
-            title: "Enrolados",
-            image: "https://image.tmdb.org/t/p/original/rXLw50QWqJVkQQ47Ic6M8bqWNU5.jpg"
+            title: "Zootopia 2",
+            image: "https://image.tmdb.org/t/p/original/oMB0dF0NTXA9UPu3GxE9gGbcMwP.jpg"
         },
         {
-            title: "Os Incríveis",
-            image: "https://image.tmdb.org/t/p/original/pixYsUt2szQsuInRk59Wn9Kbyg4.jpg"
+            title: "Barbie Vida de Sereia",
+            image: "https://image.tmdb.org/t/p/original/csSEukCACMBPgqDgujDBHG4bfpj.jpg"
         },
         {
-            title: "Ratatouille",
-            image: "https://image.tmdb.org/t/p/original/jQ6Vuxe1CEPMXTF7d0fZgdIBY8U.jpg"
+            title: "Shrek 2",
+            image: "https://image.tmdb.org/t/p/original/mb2QwAHlV333023HYrHcSrX8WL9.jpg"
         },
         {
-            title: "SpyXFamily",
-            image: "https://image.tmdb.org/t/p/original/1BzFWEZROwAGjIpA4LI2hm1rqnB.jpg"
+            title: "Tempo com Você",
+            image: "https://image.tmdb.org/t/p/original/mBl7B4r5k0PFTBPd0uTacm2ml4O.jpg"
         },
         {
-            title: "Viva a vida é uma festa",
-            image: "https://image.tmdb.org/t/p/original/hWGEEuYpT0KnjEVRUYmNijjQ6G8.jpg"
+            title: "Homem-Aranha: No Aranhaverso",
+            image: "https://image.tmdb.org/t/p/original/bII9g04BrGysZZEyjEHv5i2HFbt.jpg"
         }
     ];
 
