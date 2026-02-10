@@ -371,9 +371,9 @@ function initHorizontalCarousels() {
             container: document.getElementById('dragonContainer')
         },
         { 
-            prevBtn: document.getElementById('dragonBallPrev'),
-            nextBtn: document.getElementById('dragonBallNext'),
-            container: document.getElementById('dragonBallContainer')
+            prevBtn: document.getElementById('animesPrev'),
+            nextBtn: document.getElementById('animesNext'),
+            container: document.getElementById('animesContainer')
         },
         { 
             prevBtn: document.getElementById('incrediblesPrev'),
