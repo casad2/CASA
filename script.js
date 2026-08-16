@@ -1,4 +1,4 @@
-// Sistema de Abas Funcionais
+// Sistema de Abas Funcionais (agora apenas Cinema)
 document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.querySelectorAll('#menu a');
     const mobileTabs = document.querySelectorAll('.mobile-tab');
@@ -40,8 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (tabId === 'cinema') {
                     initCarousel();
                     initHorizontalCarousels();
-                    initPosterModal();
-                } else if (tabId === 'library') {
                     initPosterModal();
                 }
             }, 100);
@@ -92,8 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (targetTabId === 'cinema') {
                     initCarousel();
                     initHorizontalCarousels();
-                    initPosterModal();
-                } else if (targetTabId === 'library') {
                     initPosterModal();
                 }
             }, 100);
@@ -366,9 +362,9 @@ function initHorizontalCarousels() {
             container: document.getElementById('singleMoviesContainer')
         },
         { 
-            prevBtn: document.getElementById('dragonPrev'),
-            nextBtn: document.getElementById('dragonNext'),
-            container: document.getElementById('dragonContainer')
+            prevBtn: document.getElementById('dreamrev'),     // Corrigido
+            nextBtn: document.getElementById('dreamNext'),
+            container: document.getElementById('dreamContainer')
         },
         { 
             prevBtn: document.getElementById('animesPrev'),
@@ -381,9 +377,9 @@ function initHorizontalCarousels() {
             container: document.getElementById('incrediblesContainer')
         },
         { 
-            prevBtn: document.getElementById('spyFamilyPrev'),
-            nextBtn: document.getElementById('spyFamilyNext'),
-            container: document.getElementById('spyFamilyContainer')
+            prevBtn: document.getElementById('nclassPrev'),   // Corrigido
+            nextBtn: document.getElementById('nclassNext'),
+            container: document.getElementById('nclassContainer')
         }
     ];
     
