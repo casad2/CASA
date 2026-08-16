@@ -1,4 +1,4 @@
-// Sistema de Abas Funcionais (agora apenas Cinema)
+// Sistema de Abas Funcionais
 document.addEventListener('DOMContentLoaded', function() {
     const menuLinks = document.querySelectorAll('#menu a');
     const mobileTabs = document.querySelectorAll('.mobile-tab');
@@ -10,32 +10,23 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Remove a classe active de todos os itens do menu
             menuLinks.forEach(item => {
                 item.parentElement.classList.remove('active');
             });
             
-            // Adiciona a classe active ao item clicado
             this.parentElement.classList.add('active');
             
-            // Obtém o id da aba
             const tabId = this.getAttribute('data-tab');
             
-            // Esconde todas as abas
             tabContents.forEach(content => {
                 content.classList.remove('active');
             });
             
-            // Mostra a aba clicada
             document.getElementById(tabId).classList.add('active');
             
-            // Scroll suave para o topo da página ao mudar de aba
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            // Fecha o modal se estiver aberto
             closeModal();
             
-            // Inicializar elementos se necessário
             setTimeout(() => {
                 if (tabId === 'cinema') {
                     initCarousel();
@@ -51,15 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
         tab.addEventListener('click', function(e) {
             e.preventDefault();
             
-            // Remove a classe active de todos os tabs mobile
             mobileTabs.forEach(item => {
                 item.classList.remove('active');
             });
             
-            // Adiciona a classe active ao tab clicado
             this.classList.add('active');
             
-            // Atualiza o menu desktop também
             const tabId = this.getAttribute('data-tab');
             menuLinks.forEach(item => {
                 item.parentElement.classList.remove('active');
@@ -68,24 +56,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Obtém o id da aba
             const targetTabId = this.getAttribute('href').substring(1);
             
-            // Esconde todas as abas
             tabContents.forEach(content => {
                 content.classList.remove('active');
             });
             
-            // Mostra a aba clicada
             document.getElementById(targetTabId).classList.add('active');
             
-            // Scroll suave para o topo da página ao mudar de aba
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            // Fecha o modal se estiver aberto
             closeModal();
             
-            // Inicializar elementos se necessário
             setTimeout(() => {
                 if (targetTabId === 'cinema') {
                     initCarousel();
@@ -125,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     
-    // Inicializar animações
     document.querySelectorAll('.poster, .about-section, .sidebar-section').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(10px)';
@@ -135,16 +115,13 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', animateOnScroll);
     animateOnScroll();
     
-    // ===== SISTEMA DO CARROSSEL PRINCIPAL =====
     initCarousel();
     
-    // Inicializar sistemas adicionais
     setTimeout(() => {
         initHorizontalCarousels();
         initPosterModal();
     }, 300);
     
-    // Funções auxiliares
     function closeModal() {
         const modal = document.getElementById('filmModal');
         if (modal.classList.contains('show')) {
@@ -203,12 +180,9 @@ function initCarousel() {
         }
     ];
 
-    // Inicializar carrossel apenas se estiver na aba Cinema
     const cinemaTab = document.getElementById('cinema');
     if (cinemaTab && cinemaTab.classList.contains('active')) {
-        // Verificar se o carrossel já foi criado
         if (!document.getElementById('carouselContainer')) {
-            // Criar estrutura do carrossel
             const carouselHTML = `
                 <section class="carousel-section">
                     <div class="carousel">
@@ -224,7 +198,6 @@ function initCarousel() {
                 </section>
             `;
 
-            // Inserir carrossel após a seção "Sobre"
             const content = cinemaTab.querySelector('#content');
             const aboutSection = content.querySelector('.about-section');
             
@@ -235,12 +208,10 @@ function initCarousel() {
                     content.insertAdjacentHTML('afterbegin', carouselHTML);
                 }
                 
-                // Popular carrossel
                 const container = document.getElementById('carouselContainer');
                 const indicators = document.getElementById('carouselIndicators');
                 
                 carouselData.forEach((item, index) => {
-                    // Criar slide
                     const slide = document.createElement('div');
                     slide.className = 'carousel-slide';
                     slide.innerHTML = `
@@ -248,7 +219,6 @@ function initCarousel() {
                     `;
                     container.appendChild(slide);
 
-                    // Criar indicador
                     const indicator = document.createElement('div');
                     indicator.className = 'carousel-indicator' + (index === 0 ? ' active' : '');
                     indicator.setAttribute('data-index', index);
@@ -259,16 +229,12 @@ function initCarousel() {
                     indicators.appendChild(indicator);
                 });
 
-                // Inicializar variáveis do carrossel
                 window.currentCarouselSlide = 0;
                 window.carouselInterval = null;
-
-                // Iniciar autoplay
                 startCarouselAutoPlay();
             }
         }
 
-        // Adicionar filmes premiados ao sidebar
         const sidebar = cinemaTab.querySelector('#sidebar');
         if (sidebar && !document.getElementById('awardedList')) {
             const awardedHTML = `
@@ -278,10 +244,8 @@ function initCarousel() {
                 </div>
             `;
             
-            // Inserir no sidebar
             sidebar.insertAdjacentHTML('afterbegin', awardedHTML);
             
-            // Popular filmes premiados
             const awardedList = document.getElementById('awardedList');
             awardedData.forEach(item => {
                 const listItem = document.createElement('div');
@@ -304,7 +268,7 @@ function initCarousel() {
     }
 }
 
-// Funções do carrossel
+// Funções do carrossel principal
 function updateCarousel() {
     const container = document.getElementById('carouselContainer');
     const indicators = document.querySelectorAll('.carousel-indicator');
@@ -349,38 +313,14 @@ function startCarouselAutoPlay() {
 
 // ===== SISTEMA DE CARROSSÉIS HORIZONTAIS - CORRIGIDO =====
 function initHorizontalCarousels() {
-    // Configurar todos os carrosséis horizontais
+    // Lista com todos os carrosséis e seus respectivos IDs
     const carousels = [
-        { 
-            prevBtn: document.getElementById('nowPlayingPrev'),
-            nextBtn: document.getElementById('nowPlayingNext'),
-            container: document.getElementById('nowPlayingContainer')
-        },
-        { 
-            prevBtn: document.getElementById('singleMoviesPrev'),
-            nextBtn: document.getElementById('singleMoviesNext'),
-            container: document.getElementById('singleMoviesContainer')
-        },
-        { 
-            prevBtn: document.getElementById('dreamrev'),     // Corrigido
-            nextBtn: document.getElementById('dreamNext'),
-            container: document.getElementById('dreamContainer')
-        },
-        { 
-            prevBtn: document.getElementById('animesPrev'),
-            nextBtn: document.getElementById('animesNext'),
-            container: document.getElementById('animesContainer')
-        },
-        { 
-            prevBtn: document.getElementById('incrediblesPrev'),
-            nextBtn: document.getElementById('incrediblesNext'),
-            container: document.getElementById('incrediblesContainer')
-        },
-        { 
-            prevBtn: document.getElementById('nclassPrev'),   // Corrigido
-            nextBtn: document.getElementById('nclassNext'),
-            container: document.getElementById('nclassContainer')
-        }
+        { prevBtn: document.getElementById('nowPlayingPrev'), nextBtn: document.getElementById('nowPlayingNext'), container: document.getElementById('nowPlayingContainer') },
+        { prevBtn: document.getElementById('singleMoviesPrev'), nextBtn: document.getElementById('singleMoviesNext'), container: document.getElementById('singleMoviesContainer') },
+        { prevBtn: document.getElementById('dreamrev'), nextBtn: document.getElementById('dreamNext'), container: document.getElementById('dreamContainer') },
+        { prevBtn: document.getElementById('animesPrev'), nextBtn: document.getElementById('animesNext'), container: document.getElementById('animesContainer') },
+        { prevBtn: document.getElementById('incrediblesPrev'), nextBtn: document.getElementById('incrediblesNext'), container: document.getElementById('incrediblesContainer') },
+        { prevBtn: document.getElementById('nclassPrev'), nextBtn: document.getElementById('nclassNext'), container: document.getElementById('nclassContainer') }
     ];
     
     carousels.forEach(carousel => {
@@ -393,10 +333,8 @@ function initHorizontalCarousels() {
 function setupCarouselNavigation(prevBtn, nextBtn, container) {
     if (!prevBtn || !nextBtn || !container) return;
     
-    // Configurar scroll suave
-    const scrollAmount = 300; // Quantidade de pixels para rolar
+    const scrollAmount = 300;
     
-    // Evento para botão anterior
     prevBtn.addEventListener('click', () => {
         container.scrollBy({
             left: -scrollAmount,
@@ -404,7 +342,6 @@ function setupCarouselNavigation(prevBtn, nextBtn, container) {
         });
     });
     
-    // Evento para botão próximo
     nextBtn.addEventListener('click', () => {
         container.scrollBy({
             left: scrollAmount,
@@ -412,12 +349,10 @@ function setupCarouselNavigation(prevBtn, nextBtn, container) {
         });
     });
     
-    // Atualizar visibilidade dos botões baseado na posição do scroll
     const updateButtonVisibility = () => {
         const scrollLeft = container.scrollLeft;
         const maxScroll = container.scrollWidth - container.clientWidth;
         
-        // Mostrar/ocultar botões baseado na posição do scroll
         if (scrollLeft <= 10) {
             prevBtn.style.opacity = '0.3';
             prevBtn.style.pointerEvents = 'none';
@@ -435,13 +370,8 @@ function setupCarouselNavigation(prevBtn, nextBtn, container) {
         }
     };
     
-    // Atualizar visibilidade inicial
     updateButtonVisibility();
-    
-    // Atualizar visibilidade durante o scroll
     container.addEventListener('scroll', updateButtonVisibility);
-    
-    // Atualizar visibilidade ao redimensionar a janela
     window.addEventListener('resize', updateButtonVisibility);
 }
 
@@ -453,14 +383,12 @@ function initPosterModal() {
     
     posters.forEach(poster => {
         poster.addEventListener('click', function(e) {
-            // Obter dados dos atributos data-*
             const title = this.getAttribute('data-title');
             const year = this.getAttribute('data-year');
             const description = this.getAttribute('data-description');
             const rating = this.getAttribute('data-rating');
             const status = this.getAttribute('data-status');
             
-            // Preencher modal
             document.getElementById('modalTitle').textContent = title;
             document.getElementById('modalYear').textContent = year;
             
@@ -478,7 +406,6 @@ function initPosterModal() {
             
             document.getElementById('modalDescription').textContent = description || 'Sem descrição disponível.';
             
-            // Mostrar modal
             modal.classList.add('show');
             document.body.style.overflow = 'hidden';
         });
@@ -498,7 +425,6 @@ function initPosterModal() {
         }
     });
     
-    // Fechar modal com ESC
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('show')) {
             modal.classList.remove('show');
